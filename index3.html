@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(number) {
+        if (number === 0 || number === 1) {
+            return true;
+        }
+        let a = 1, b = 0, count = 2;
+        while (count <= number) {
+            if (a + count === number) {
+                return true;
+            }
+            b = a;
+            a = count;
+            count += b;
+        }
+        return false;
+    }
+    isFibonacci();
+    console.log(isFibonacci(2));
+</script>
+</body>
+</html>
